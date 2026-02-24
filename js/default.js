@@ -25,12 +25,13 @@ tailwind.config = {
 
 AOS.init();
 
-const btn = document.getElementById("mobile-menu-button");
-const menu = document.getElementById("mobile-menu");
+const btn = document.getElementById("menuBtn");
+const menu = document.getElementById("menu");
 
-btn.addEventListener("click", () => {
-  menu.classList.toggle("hidden");
-});
+btn.onclick = () => {
+  menu.classList.toggle("max-h-0");
+  menu.classList.toggle("max-h-96");
+};
 
 $(document).ready(function () {
   var $owl = $(".owl-carousel").owlCarousel({
@@ -53,5 +54,55 @@ $(document).ready(function () {
   });
   $(".custom-prev").on("click", function () {
     $(".owl-carousel").trigger("prev.owl.carousel");
+  });
+});
+
+$(document).ready(function () {
+  $(".slider").slick({
+    infinite: true,
+    loop: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 0,
+    arrows: false,
+    dots: false,
+    draggable: false,
+    touchMove: false,
+    cssEase: "linear",
+    speed: 5000,
+    pauseOnHover: false,
+    pauseOnFocus: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 6,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+
+      {
+        breakpoint: 320,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   });
 });

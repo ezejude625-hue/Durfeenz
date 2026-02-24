@@ -20,9 +20,11 @@ tailwind.config = {
   },
 };
 
-const btn = document.getElementById("mobile-menu-button");
-const menu = document.getElementById("mobile-menu");
+const btn = document.getElementById("menuBtn");
+const menu = document.getElementById("menu");
 
-btn.addEventListener("click", () => {
-  menu.classList.toggle("hidden");
-});
+btn.onclick = () => {
+  menu.classList.toggle("max-h-0");
+
+  menu.classList.toggle("max-h-96");
+};
