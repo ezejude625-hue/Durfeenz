@@ -28,3 +28,7 @@ btn.onclick = () => {
 
   menu.classList.toggle("max-h-96");
 };
+
+window.onload = function () {
+  document.getElementById("loader").style.display = "none";
+};
