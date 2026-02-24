@@ -107,10 +107,13 @@ $(document).ready(function () {
   });
 });
 
+const loader = document.getElementById("loader");
+
 window.addEventListener("load", function () {
   setTimeout(function () {
-    const loader = document.getElementById("loader");
-
+    if (!sessionStorage.getItem("loaded")) {
+      loader.style.display = "flex";
+    }
     loader.style.opacity = "0";
 
     setTimeout(function () {
@@ -118,3 +121,5 @@ window.addEventListener("load", function () {
     }, 600);
   }, 1500);
 });
+
+sessionStorage.setItem("loaded", true);
