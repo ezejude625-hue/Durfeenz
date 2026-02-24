@@ -107,6 +107,14 @@ $(document).ready(function () {
   });
 });
 
-window.onload = function () {
-  document.getElementById("loader").style.display = "none";
-};
+window.addEventListener("load", function () {
+  setTimeout(function () {
+    const loader = document.getElementById("loader");
+
+    loader.style.opacity = "0";
+
+    setTimeout(function () {
+      loader.style.display = "none";
+    }, 600);
+  }, 1500);
+});
