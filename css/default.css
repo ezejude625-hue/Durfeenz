@@ -35,3 +35,55 @@ body {
 .ticker-scroll:hover {
     animation-play-state: paused;
 }
+
+/* carousel.css - Custom styles for Owl Carousel */
+.carousel-wrap {
+    position: relative;
+}
+
+/* Hide built-in nav (we use custom buttons) */
+.owl-carousel .owl-nav {
+    display: none;
+}
+
+.custom-prev,
+.custom-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    font-size: 28px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    border: none;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.2s ease;
+}
+
+.custom-prev:hover,
+.custom-next:hover {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.custom-prev {
+    left: 12px;
+}
+
+.custom-next {
+    right: 12px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+
+    .custom-prev,
+    .custom-next {
+        display: none;
+    }
+}

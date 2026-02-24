@@ -7,6 +7,18 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Durfeenz | AI-Powered Fintech Investment Platform</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <!-- Owl Carousel Theme CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
         rel="stylesheet" />
     <link
@@ -805,75 +817,87 @@
 
 
     <!-- Testimonials -->
-    <section class="py-24 bg-white dark:bg-slate-900/50">
+    <section class="py-24 bg-white dark:bg-slate-900/50" data-aos="fade-up" data-aos-easing="ease"
+        data-aos-duration="1000">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white mb-4">Voices of Our Success</h2>
             </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-background-light dark:bg-slate-800 p-8 rounded-2xl relative" data-aos="flip-right"
-                    data-aos-easing="ease" data-aos-duration="1000">
-                    <div class="flex gap-1 text-amber-500 mb-4">
-                        <span class="material-symbols-outlined fill-1">star</span>
-                        <span class="material-symbols-outlined fill-1">star</span>
-                        <span class="material-symbols-outlined fill-1">star</span>
-                        <span class="material-symbols-outlined fill-1">star</span>
-                        <span class="material-symbols-outlined fill-1">star</span>
+            <div class="carousel-wrap">
+                <div class="owl-carousel owl-theme">
+                    <div class="bg-background-light dark:bg-slate-800 p-8 rounded-2xl relative">
+                        <div class="flex gap-1 text-amber-500 mb-4">
+                            <span class="material-symbols-outlined fill-1">star</span>
+                            <span class="material-symbols-outlined fill-1">star</span>
+                            <span class="material-symbols-outlined fill-1">star</span>
+                            <span class="material-symbols-outlined fill-1">star</span>
+                            <span class="material-symbols-outlined fill-1">star</span>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-300 italic mb-6">"Durfeenz changed my perspective
+                            on AI
+                            trading. The consistency of the daily ROI is something I haven't seen elsewhere."</p>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 rounded-full overflow-hidden border-2 border-primary/20 flex-shrink-0">
+                                <img class="w-full h-full object-cover" data-alt="User avatar of a smiling man"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfuyXrr_8fPNrlFcyxxcdW1VI_TDCAu6HCH94_774gywsOlbCkLAnKP7Rz9ZjI8yKfKasjXQF68KgPd1KzYPEmUEeE-MMyQNmsQU7xossOyd2oM4Um-_pq0LvX4ebRJuZQ_UHYxjIRFdE4o-LahhNFv_n_65bd7K63IrtI6RYs2gxp6oElbI4HSbEi28NqsvD2v-SXzwOaEg78D5a_VNwSUW8Zyv1AZzwm95fCmoBu4m5rmXxKTQ9hb2VZhKM_2vD0onTYdEXs3wvP" />
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 dark:text-white">James Mitchell</h4>
+                                <p class="text-xs text-slate-500">Professional Investor</p>
+                            </div>
+                        </div>
                     </div>
-                    <p class="text-slate-600 dark:text-slate-300 italic mb-6">"Durfeenz changed my perspective on AI
-                        trading. The consistency of the daily ROI is something I haven't seen elsewhere."</p>
-                    <div class="flex items-center gap-4">
-                        <img class="w-12 h-12 rounded-full border-2 border-primary/20"
-                            data-alt="User avatar of a smiling man"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfuyXrr_8fPNrlFcyxxcdW1VI_TDCAu6HCH94_774gywsOlbCkLAnKP7Rz9ZjI8yKfKasjXQF68KgPd1KzYPEmUEeE-MMyQNmsQU7xossOyd2oM4Um-_pq0LvX4ebRJuZQ_UHYxjIRFdE4o-LahhNFv_n_65bd7K63IrtI6RYs2gxp6oElbI4HSbEi28NqsvD2v-SXzwOaEg78D5a_VNwSUW8Zyv1AZzwm95fCmoBu4m5rmXxKTQ9hb2VZhKM_2vD0onTYdEXs3wvP" />
-                        <div>
-                            <h4 class="font-bold text-slate-900 dark:text-white">James Mitchell</h4>
-                            <p class="text-xs text-slate-500">Professional Investor</p>
+                    <div class="bg-background-light dark:bg-slate-800 p-8 rounded-2xl relative">
+                        <div class="flex gap-1 text-amber-500 mb-4">
+                            <span class="material-symbols-outlined fill-1">star</span>
+                            <span class="material-symbols-outlined fill-1">star</span>
+                            <span class="material-symbols-outlined fill-1">star</span>
+                            <span class="material-symbols-outlined fill-1">star</span>
+                            <span class="material-symbols-outlined fill-1">star</span>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-300 italic mb-6">"As a complete beginner, I was
+                            nervous.
+                            But the starter plan and the transparent dashboard made me feel completely at ease."</p>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 rounded-full overflow-hidden border-2 border-primary/20 flex-shrink-0">
+                                <img class="w-full h-full object-cover" data-alt="User avatar of a smiling woman"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVmsRCgMds8M0k7xljocqJqGID7Uix_LhRdt81PAWOR6Vd7MIdi4Fovi0Hmg9Lrl26opyLc-8AQzVseu0sm1E32Ofdj7mW7sxr8nvOqskFGeyWYBFBhsJqpDr468aHuWv5Sv94Ayf9Fpluc32h2yHAsM134N0xycIqhs1VCnoook_CB0LFvco95pX3hm7zm4lYsSRUN9EpePANTBZuYml0Zh53HCyIyNl1rX6j7NW-vbZ8nVM1ocrFt5JKgLf2jWc4DSdNIuHRcdy-" />
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 dark:text-white">Elena Rodriguez</h4>
+                                <p class="text-xs text-slate-500">Retail Trader</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-background-light dark:bg-slate-800 p-8 rounded-2xl relative">
+                        <div class="flex gap-1 text-amber-500 mb-4">
+                            <span class="material-symbols-outlined fill-1">star</span>
+                            <span class="material-symbols-outlined fill-1">star</span>
+                            <span class="material-symbols-outlined fill-1">star</span>
+                            <span class="material-symbols-outlined fill-1">star</span>
+                            <span class="material-symbols-outlined fill-1">star</span>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-300 italic mb-6">"The whale tier benefits are
+                            exceptional.
+                            The white-glove service and high ROI have significantly boosted my net worth."</p>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 rounded-full overflow-hidden border-2 border-primary/20 flex-shrink-0">
+                                <img class="w-full h-full object-cover" data-alt="User avatar of a man with glasses"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGO12gKpXGdVc-aEN95RZ8TZoaXHyQPDockj5TDqYkWdsT1n887C5n5zoNYtYqgoomH9mPFKnXXpPZ2mMkYoLTApxYNv6kg4qQSQN9Fn-r2hoRFblbwi4COO5Tsjt203qiC6tjfE50aVG4K5G2j489IsCJNtSpbDFIdIdceMTqp-prCD6ViyI-NaYXzmh7BlrlwnyZpa7vEpZdaCLFmy-dROaHV5KCjBlAaI3zg-YJT6UB0sNWDFDl0i-A6h1DURtUgmeEBG6fI_li" />
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 dark:text-white">Marcus Thorne</h4>
+                                <p class="text-xs text-slate-500">High Net Worth Client</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="bg-background-light dark:bg-slate-800 p-8 rounded-2xl relative" data-aos="flip-down"
-                    data-aos-easing="ease" data-aos-duration="1000">
-                    <div class="flex gap-1 text-amber-500 mb-4">
-                        <span class="material-symbols-outlined fill-1">star</span>
-                        <span class="material-symbols-outlined fill-1">star</span>
-                        <span class="material-symbols-outlined fill-1">star</span>
-                        <span class="material-symbols-outlined fill-1">star</span>
-                        <span class="material-symbols-outlined fill-1">star</span>
-                    </div>
-                    <p class="text-slate-600 dark:text-slate-300 italic mb-6">"As a complete beginner, I was nervous.
-                        But the starter plan and the transparent dashboard made me feel completely at ease."</p>
-                    <div class="flex items-center gap-4">
-                        <img class="w-12 h-12 rounded-full border-2 border-primary/20"
-                            data-alt="User avatar of a smiling woman"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVmsRCgMds8M0k7xljocqJqGID7Uix_LhRdt81PAWOR6Vd7MIdi4Fovi0Hmg9Lrl26opyLc-8AQzVseu0sm1E32Ofdj7mW7sxr8nvOqskFGeyWYBFBhsJqpDr468aHuWv5Sv94Ayf9Fpluc32h2yHAsM134N0xycIqhs1VCnoook_CB0LFvco95pX3hm7zm4lYsSRUN9EpePANTBZuYml0Zh53HCyIyNl1rX6j7NW-vbZ8nVM1ocrFt5JKgLf2jWc4DSdNIuHRcdy-" />
-                        <div>
-                            <h4 class="font-bold text-slate-900 dark:text-white">Elena Rodriguez</h4>
-                            <p class="text-xs text-slate-500">Retail Trader</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-background-light dark:bg-slate-800 p-8 rounded-2xl relative" data-aos="flip-left"
-                    data-aos-easing="ease" data-aos-duration="1000">
-                    <div class="flex gap-1 text-amber-500 mb-4">
-                        <span class="material-symbols-outlined fill-1">star</span>
-                        <span class="material-symbols-outlined fill-1">star</span>
-                        <span class="material-symbols-outlined fill-1">star</span>
-                        <span class="material-symbols-outlined fill-1">star</span>
-                        <span class="material-symbols-outlined fill-1">star</span>
-                    </div>
-                    <p class="text-slate-600 dark:text-slate-300 italic mb-6">"The whale tier benefits are exceptional.
-                        The white-glove service and high ROI have significantly boosted my net worth."</p>
-                    <div class="flex items-center gap-4">
-                        <img class="w-12 h-12 rounded-full border-2 border-primary/20"
-                            data-alt="User avatar of a man with glasses"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGO12gKpXGdVc-aEN95RZ8TZoaXHyQPDockj5TDqYkWdsT1n887C5n5zoNYtYqgoomH9mPFKnXXpPZ2mMkYoLTApxYNv6kg4qQSQN9Fn-r2hoRFblbwi4COO5Tsjt203qiC6tjfE50aVG4K5G2j489IsCJNtSpbDFIdIdceMTqp-prCD6ViyI-NaYXzmh7BlrlwnyZpa7vEpZdaCLFmy-dROaHV5KCjBlAaI3zg-YJT6UB0sNWDFDl0i-A6h1DURtUgmeEBG6fI_li" />
-                        <div>
-                            <h4 class="font-bold text-slate-900 dark:text-white">Marcus Thorne</h4>
-                            <p class="text-xs text-slate-500">High Net Worth Client</p>
-                        </div>
-                    </div>
-                </div>
+                <!-- Custom nav buttons (placed at carousel edges) -->
+                <button class="custom-prev" aria-label="Previous">&lt;</button>
+                <button class="custom-next" aria-label="Next">&gt;</button>
             </div>
         </div>
     </section>
