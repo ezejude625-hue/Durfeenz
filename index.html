@@ -334,8 +334,7 @@
     </section>
 
     <!-- who we are -->
-    <section class="py-24 bg-slate-50 dark:bg-slate-900/30 overflow-hidden" data-aos="fade-up" data-aos-easing="ease-in"
-        data-aos-duration="1000">
+    <section class="py-24 bg-slate-50 dark:bg-slate-900/30 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div class="order-2 lg:order-1">
@@ -583,82 +582,133 @@
     </section>
 
     <!-- calculate -->
-    <section class="py-24 bg-slate-50 dark:bg-slate-900/20">
+    <section class="py-24 bg-slate-50 dark:bg-slate-900/20" data-aos="fade-up" data-aos-easing="ease-in"
+        data-aos-duration="1000">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Header -->
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white mb-4">Calculate Your Potential Returns
+                <h2 class="text-3xl font-extrabold text-slate-900 mb-4">
+                    Calculate Your Potential Returns
                 </h2>
-                <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Use our interactive calculator to
-                    estimate your earnings based on your investment strategy.</p>
+                <p class="text-slate-600 max-w-2xl mx-auto">
+                    Use our interactive calculator to estimate your earnings based on your investment strategy.
+                </p>
             </div>
-            <div class="max-w-4xl mx-auto bg-white dark:bg-slate-900 rounded-3xl shadow-xl border border-slate-200 dark:border-slate-800 overflow-hidden"
-                data-aos="slide-up" data-aos-easing="ease" data-aos-duration="1000">
+
+            <!-- Card -->
+            <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
                 <div class="grid md:grid-cols-5">
-                    <!-- Inputs Column -->
+
+                    <!-- Inputs -->
                     <div class="md:col-span-3 p-8 lg:p-12 space-y-10">
+
+                        <!-- Investment Amount -->
                         <div class="space-y-4">
                             <div class="flex justify-between items-center">
-                                <label
-                                    class="text-sm font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider">Investment
-                                    Amount</label>
-                                <span class="text-2xl font-black text-primary">$5,000</span>
+                                <label class="text-sm font-bold text-slate-700 uppercase tracking-wider">
+                                    Investment Amount
+                                </label>
+                                <span id="investmentAmount" class="text-2xl font-black text-primary">$5,000</span>
                             </div>
-                            <input
-                                class="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-primary"
-                                max="100000" min="100" step="100" type="range" value="5000" />
+
+                            <!-- RANGE SLIDER -->
+                            <input id="investmentSlider"
+                                class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-primary"
+                                max="100000" min="200" step="200" type="range" value="5000">
+
+                            <!-- NEW: TEXT INPUT (syncs with slider) -->
+                            <input id="investmentInput" type="number" min="200" max="100000" step="200" value="5000"
+                                class="w-full mt-3 px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary font-semibold text-slate-700">
+
                             <div class="flex justify-between text-xs text-slate-400 font-medium italic">
-                                <span>Min: $100</span>
+                                <span>Min: $200</span>
                                 <span>Max: $100,000</span>
                             </div>
                         </div>
+
+                        <!-- Plans -->
                         <div class="space-y-4">
-                            <label
-                                class="text-sm font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider">Select
-                                Your Plan</label>
+                            <label class="text-sm font-bold text-slate-700 uppercase tracking-wider">
+                                Select Your Plan
+                            </label>
+
                             <div class="grid grid-cols-2 gap-3">
+
+                                <!-- TO CHANGE ROI:
+                                 Just edit the number inside data-roi="X.X"
+                                 Example: data-roi="1.2" means 1.2% daily return
+                            -->
+
                                 <button
-                                    class="px-4 py-3 rounded-xl border-2 border-primary bg-primary/5 text-primary font-bold text-sm text-left flex items-center justify-between">
-                                    Starter (1.2%)
+                                    class="plan-btn px-4 py-3 rounded-xl border-2 border-primary bg-primary/5 text-primary font-bold text-sm text-left flex items-center justify-between"
+                                    data-roi="4.7">
+                                    Classic (4.7%)
                                     <span class="material-symbols-outlined text-sm">check_circle</span>
                                 </button>
+
                                 <button
-                                    class="px-4 py-3 rounded-xl border-2 border-slate-100 dark:border-slate-800 hover:border-slate-200 dark:hover:border-slate-700 font-bold text-sm text-slate-600 dark:text-slate-400 text-left">
-                                    Basic (1.5%)
+                                    class="plan-btn px-4 py-3 rounded-xl border-2 border-slate-200 font-bold text-sm text-slate-600 text-left flex items-center justify-between"
+                                    data-roi="7.2">
+                                    Deluxe (7.2%)
+                                    <span class="material-symbols-outlined text-sm hidden">check_circle</span>
                                 </button>
+
                                 <button
-                                    class="px-4 py-3 rounded-xl border-2 border-slate-100 dark:border-slate-800 hover:border-slate-200 dark:hover:border-slate-700 font-bold text-sm text-slate-600 dark:text-slate-400 text-left">
-                                    Pro (2.0%)
+                                    class="plan-btn px-4 py-3 rounded-xl border-2 border-slate-200 font-bold text-sm text-slate-600 text-left flex items-center justify-between"
+                                    data-roi="9">
+                                    Master (9%)
+                                    <span class="material-symbols-outlined text-sm hidden">check_circle</span>
                                 </button>
+
                                 <button
-                                    class="px-4 py-3 rounded-xl border-2 border-slate-100 dark:border-slate-800 hover:border-slate-200 dark:hover:border-slate-700 font-bold text-sm text-slate-600 dark:text-slate-400 text-left">
-                                    Advanced (2.5%)
+                                    class="plan-btn px-4 py-3 rounded-xl border-2 border-slate-200 font-bold text-sm text-slate-600 text-left flex items-center justify-between"
+                                    data-roi="11.2">
+                                    Pro (11.2%)
+                                    <span class="material-symbols-outlined text-sm hidden">check_circle</span>
                                 </button>
+
+                                <button
+                                    class="plan-btn px-4 py-3 rounded-xl border-2 border-slate-200 font-bold text-sm text-slate-600 text-left flex items-center justify-between"
+                                    data-roi="13.3">
+                                    VIP (13.3%)
+                                    <span class="material-symbols-outlined text-sm hidden">check_circle</span>
+                                </button>
+
                             </div>
                         </div>
                     </div>
-                    <!-- Results Column -->
+
+                    <!-- Results -->
                     <div class="md:col-span-2 bg-slate-900 p-8 lg:p-12 text-white flex flex-col justify-center">
                         <div class="space-y-8 mb-10">
                             <div>
-                                <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Est. Daily
-                                    Profit</p>
-                                <p class="text-3xl font-black text-emerald-500">$60.00</p>
+                                <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">
+                                    Est. Daily Profit
+                                </p>
+                                <p id="dailyProfit" class="text-3xl font-black text-emerald-500">$60.00</p>
                             </div>
+
                             <div>
-                                <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Est. Monthly
-                                    Profit (30 Days)</p>
-                                <p class="text-4xl font-black text-white">$1,800.00</p>
+                                <!-- CHANGED TO WEEKLY -->
+                                <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">
+                                    Est. Weekly Profit (7 Days)
+                                </p>
+                                <p id="weeklyProfit" class="text-4xl font-black text-white">$420.00</p>
                             </div>
+
                             <div class="pt-4 border-t border-slate-800">
-                                <p class="text-xs font-medium text-slate-400">Total returns are based on selected plan
-                                    ROI and are credited daily.</p>
+                                <p class="text-xs font-medium text-slate-400">
+                                    Total returns are based on selected plan ROI and are credited daily.
+                                </p>
                             </div>
                         </div>
+
                         <button
                             class="w-full py-4 bg-primary text-white font-bold rounded-xl shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform">
                             Start Investing Now
                         </button>
                     </div>
+
                 </div>
             </div>
         </div>

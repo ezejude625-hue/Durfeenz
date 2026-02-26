@@ -106,3 +106,76 @@ $(document).ready(function () {
     ],
   });
 });
+
+// Calculator
+
+const slider = document.getElementById("investmentSlider");
+const inputBox = document.getElementById("investmentInput");
+const investmentDisplay = document.getElementById("investmentAmount");
+const dailyProfitEl = document.getElementById("dailyProfit");
+const weeklyProfitEl = document.getElementById("weeklyProfit");
+const planButtons = document.querySelectorAll(".plan-btn");
+
+let investment = parseFloat(slider.value);
+let roi = 4.7; // DEFAULT ROI — change if you change the default selected plan
+
+// CORE CALCULATION (easy to modify later)
+function updateResults() {
+  const dailyProfit = investment * (roi / 100);
+  const weeklyProfit = dailyProfit * 7; // weekly now
+
+  dailyProfitEl.textContent = `$${dailyProfit.toFixed(2)}`;
+  weeklyProfitEl.textContent = `$${weeklyProfit.toFixed(2)}`;
+}
+
+// ===== SLIDER → INPUT =====
+slider.addEventListener("input", (e) => {
+  investment = parseFloat(e.target.value);
+  inputBox.value = investment;
+  investmentDisplay.textContent = `$${investment.toLocaleString()}`;
+  updateResults();
+});
+
+// ===== INPUT → SLIDER =====
+inputBox.addEventListener("input", (e) => {
+  let value = parseFloat(e.target.value);
+
+  if (isNaN(value)) value = 200;
+
+  // Limit value
+  if (value < 200) value = 200;
+  if (value > 100000) value = 100000;
+
+  // Apply correction
+  inputBox.value = value;
+
+  investment = value;
+  slider.value = value;
+
+  investmentDisplay.textContent = `$${investment.toLocaleString()}`;
+
+  updateResults();
+});
+
+// ===== PLAN SELECTION =====
+planButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    // reset styles
+    planButtons.forEach((btn) => {
+      btn.classList.remove("border-primary", "bg-primary/5", "text-primary");
+      btn.classList.add("border-slate-200", "text-slate-600");
+      btn.querySelector("span").classList.add("hidden");
+    });
+
+    // activate clicked
+    button.classList.add("border-primary", "bg-primary/5", "text-primary");
+    button.classList.remove("border-slate-200", "text-slate-600");
+    button.querySelector("span").classList.remove("hidden");
+
+    // ROI comes from data-roi (easy to edit in HTML)
+    roi = parseFloat(button.getAttribute("data-roi"));
+    updateResults();
+  });
+});
+
+updateResults();
